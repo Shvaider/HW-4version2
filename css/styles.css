@@ -26,10 +26,21 @@
         padding-left: 0;
     }
     img {
+        max-width: 100%;
+        min-height: auto;
         display: block;
     }
     address {
         font-style: normal;
+    }
+    body {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        background-color: var(--accent-background-color);
+        font-family: var(--accent-text);
+        color: var(--accent-text-color);
+        background: var(--accent-background-color);
+        color: var(--accent-text-color);
     }
     /* header */
     
@@ -44,19 +55,7 @@
         align-items: center;
         padding-top: 24px;
         padding-bottom: 25px;
-    }
-    .body {
-        font-size: 14px;
-        letter-spacing: 0.03em;
-        background-color: var(--accent-background-color);
-        font-family: var(--accent-text);
-        color: var(--accent-text-color);
-    }
-    .page {
-        background: var(--accent-background-color);
-        color: var(--accent-text-color);
-    }
-    
+    }    
     .logo {
         margin-right: 93px;
         width: 145px;
@@ -144,12 +143,8 @@
     
     .contact-item-icon {
         height: 16px;
-        fill: var(--aside-text);
+        fill: currentColor;
         margin-right: 10px;
-    }
-    .contact-item-icon:hover,
-    .contact-item-icon:focus {
-        fill: var(--accent-color);
     }
     .widget__link {
         padding-top: 32px;
@@ -157,16 +152,19 @@
         color: var(--aside-text);
         text-decoration: none;
         font-weight: 500;
+    }    
+    .nav-contact-item:hover, 
+    .nav-contact-item:focus,
+    .contact-item:hover, 
+    .widget__link:focus {
+        color: #2196F3;
+        fill: var(--accent-color);
     }
-    .auth-nav-list .nav-contact-item:hover,
-    .auth-nav-list .nav-contact-item:focus,
-    .auth-nav-list .nav-widget__link:hover,
-    .auth-nav-list .nav-widget__link:focus {
-        color:  var(--accent-color);
-    }
-    
     /* hero */
     .section-main  {
+        max-width: 1600px;
+        height: 600px;
+        margin: 0 auto;
         text-align: center;
         padding-top: 200px;
         padding-bottom: 200px;
@@ -245,11 +243,9 @@
   
     .pic-hero {
         display: flex;
-        flex-basis: calc((100% - 120px) /4);
         align-items: center;
         justify-content: center;
         height: 120px;
-        top: 774px;
         background: var(--background-color-buttons);
         border-radius: 4px;
         margin-bottom: 30px;
@@ -277,6 +273,7 @@
         line-height: 1.14;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        margin-bottom: 10px;
         color: var(--accent-text-color);
     }
     .section-content-text {
@@ -386,7 +383,7 @@
     /*Постоянные клиетны*/
     .our-clients {
         padding-top: 94px;
-        margin-bottom: 94px;
+        padding-bottom: 94px;
     }
     .description {
         font-family: var(--accent-text);
@@ -575,6 +572,7 @@
     }
     /*img*/
     .img-item-link {
+        display: block;
         text-decoration: none;
     }
     .section-img-list {
@@ -590,8 +588,8 @@
         margin-right: 30px;
         margin-bottom: 30px;
     }
-    .img-item:hover,
-    .img-item:focus {
+    .img-item-link:hover,
+    .img-item-link:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     } 
     .portfolio-description {
